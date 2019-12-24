@@ -1,0 +1,1 @@
+web: gunicorn historico.wsgi --log-file  -
