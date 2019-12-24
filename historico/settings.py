@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = 'C:/python/GitHubProjects/Historico'
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,14 +39,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'rest_framework',
+    'rest_framework.authtoken',
     'gols',
+    'cartoes',
+    'assistencias',
     'historico',
     'jogadores',
     'rodadas',
     'partidas',
     'clubes',
     'estadios',
+    'temporadas',
+    'clube_mandante',
+    'clube_visitante',
+    'clubes_partidas',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +136,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = 'imagens'
+MEDIA_URL = '/imagens/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}

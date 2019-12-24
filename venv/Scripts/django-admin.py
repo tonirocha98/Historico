@@ -1,4 +1,4 @@
-#!c:\python\historico\venv\scripts\python.exe
+#!c:\python\githubprojects\historico\venv\scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
