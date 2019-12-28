@@ -101,20 +101,6 @@ DATABASES = {
     'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
 
-#
-# DATABASES = {
-#     'default': {
-#         # 'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': config('DATABASE_URL', default=default_dburl),
-#         #'NAME':  os.path.join(DATABASE_URL, 'db.sqlite3')  'NAME': 'app_db',
-#         'USER': 'wydjoxiqkwoxjn',
-#         'PASSWORD': '73c20fc3cb93ac366a24719cfc411122c0b3ad6bca4a495e495e36b27f00dbf0',
-#         'HOST': 'ec2-54-235-250-38.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
