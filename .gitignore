@@ -1,3 +1,4 @@
 venv
 *.sqlite3
 .idea
+/historico/__pycache__/settings.cpython-38.pyc
