@@ -102,7 +102,7 @@ default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
         'NAME': config('DATABASE_URL', default=default_dburl),
         #'NAME':  os.path.join(DATABASE_URL, 'db.sqlite3')  'NAME': 'app_db',
         'USER': 'wydjoxiqkwoxjn',
