@@ -16,9 +16,17 @@ class PartidaViewSet(ModelViewSet):
 
     # detail | receber parametro via rota
     # true para metodos especificos da partida x
+
     @action(methods=['post'], detail=True)
-    def adicionar_gol_partida(self, request, pk = None):
+    def adicionar_gols(self, request, id):
+        gols = request.data['ids']
+
+        partida = Partida.objects.get(id=id)
+
+        partida.jogadores.set(gols)
+        partida.save()
         return Response(self)
+
 
     # detail | receber parametro via rota
     # false para metodos que agem em todas as partidas

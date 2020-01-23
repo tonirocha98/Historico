@@ -6,6 +6,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import SearchFilter
 from clubes.models import Clube
 from clubes.api.serializers import ClubeSerializer
+from jogadores.models import Jogador
 
 
 class ClubeViewSet(ModelViewSet):
@@ -34,15 +35,38 @@ class ClubeViewSet(ModelViewSet):
 
     # detail | receber parametro via rota
     # true para metodos especificos da Jogador x
-    @action(methods=['post'], detail=True)
-    def adicionar_gol_partida(self, request, pk=None):
-        return Response(self)
+    # @action(methods=['post'], detail=True)
+    # def adicionar_gol_partida(self, request, pk=None):
+    #     return Response(self)
 
     # detail | receber parametro via rota
     # false para metodos que agem em todas as Jogadores
-    @action(methods=['post'], detail=False)
-    def adicionar(self, request):
+    # @action(methods=['post'], detail=False)
+    # def adicionar(self, request):
+    #     return Response(self)
+
+    @action(methods=['post'], detail=True)
+    def vincular_jogadores(self, request, id):
+        jogadores = request.data['ids']
+
+        clube = Clube.objects.get(id=id)
+
+        clube.jogadores.set(jogadores)
+        clube.save()
         return Response(self)
+
+    def cria_jogadores(self, jogadores, clube):
+        for jogador in jogadores:
+            jog = Jogador.objects.create(**jogadores)
+            clube.jogadores.add(jog)
+
+    def create(self, validated_data):
+        jogadores = validated_data['jogadores']
+        del validated_data['jogadores']
+        clube = Clube.objects.create(**validated_data)
+        self.cria_jogadores(jogadores, clube)
+
+        return clube
 
     def list(self, request, *args, **kwargs):
         return super(ClubeViewSet, self).list(request, *args, **kwargs)

@@ -1,6 +1,6 @@
 from django.db import models
 from partidas.models import Partida
-from clubes.models import Clube
+# from clubes.models import Clube
 
 
 class Historico(models.Model):
@@ -10,7 +10,7 @@ class Historico(models.Model):
     # data_nascimento = models.DateTimeField(null=True)
     # ativo = models.BooleanField(default=False)
     # perna_boa = models.TextChoices('Direita', 'Esquerda', 'Ambidestro')
-    clube = models.ForeignKey(Clube, on_delete=models.PROTECT, null=True)
+    # clube = models.ForeignKey(Clube, on_delete=models.PROTECT, null=True)
     partidas = models.ManyToManyField(Partida)
 
     def __str__(self):

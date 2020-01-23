@@ -8,4 +8,6 @@ class ClubeSerializer(ModelSerializer):
 
     class Meta:
         model = Clube
-        fields = ('id', 'nome', 'data_fundacao', 'ativo', 'estadio', 'foto', 'jogadores')
+        fields = ('id', 'nome', 'data_fundacao', 'ativo', 'estadio', 'foto', 'jogadores',)
+        ready_only_fields = ('jogadores',)
+

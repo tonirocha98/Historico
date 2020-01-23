@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf5bd9ba-f014-4693-83e7-e4e01e441fac" name="Default Changelist" comment="commit project">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubes/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/clubes/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubes/api/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/clubes/api/viewsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clubes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historico/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/historico/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/historico/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/historico/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partidas/api/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/partidas/api/viewsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partidas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/partidas/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +66,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\python\GitHubProjects\Historico" />
-      <recent name="C:\python\historico\historico" />
-      <recent name="C:\python\historico" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\python\GitHubProjects\Historico" />
       <recent name="C:\python\GitHubProjects\Historico\clubes_partidas" />
@@ -74,8 +73,13 @@
       <recent name="C:\python\GitHubProjects\Historico\cartoes" />
       <recent name="C:\python\GitHubProjects\Historico\time_visitante" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\python\GitHubProjects\Historico" />
+      <recent name="C:\python\historico\historico" />
+      <recent name="C:\python\historico" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.runserver">
+  <component name="RunManager" selected="Python.migrate">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="historico" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,26 +234,46 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="674" y="405" width="356" height="200" key="Github.CreateGistDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1577555124401" />
-    <state width="1659" height="265" key="GridCell.Tab.0.bottom" timestamp="1577554782172">
+    <state width="1659" height="231" key="GridCell.Tab.0.bottom" timestamp="1577749170889">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="265" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1577554782172" />
-    <state width="1659" height="265" key="GridCell.Tab.0.center" timestamp="1577554782172">
+    <state width="1659" height="231" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.0.center" timestamp="1577749170889">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="265" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1577554782172" />
-    <state width="1659" height="265" key="GridCell.Tab.0.left" timestamp="1577554782172">
+    <state width="1659" height="231" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.0.left" timestamp="1577749170888">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="265" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1577554782172" />
-    <state width="1659" height="265" key="GridCell.Tab.0.right" timestamp="1577554782172">
+    <state width="1659" height="231" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170888" />
+    <state width="1659" height="231" key="GridCell.Tab.0.right" timestamp="1577749170889">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="265" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1577554782172" />
-    <state x="536" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1577553022932">
+    <state width="1659" height="231" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.1.bottom" timestamp="1577749170889">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="536" y="330" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1577553022932" />
+    <state width="1659" height="231" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.1.center" timestamp="1577749170889">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="231" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.1.left" timestamp="1577749170889">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="231" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state width="1659" height="231" key="GridCell.Tab.1.right" timestamp="1577749170889">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="231" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1577749170889" />
+    <state x="665" y="217" key="RollbackChangesDialog" timestamp="1577746484762">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="665" y="217" key="RollbackChangesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1577746484762" />
+    <state x="536" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1579800910164">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="536" y="330" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579800910164" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,11 +284,6 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/partidas/api/viewsets.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/clubes/api/viewsets.py</url>
           <line>23</line>
           <option name="timeStamp" value="36" />
@@ -273,6 +292,21 @@
           <url>file://$PROJECT_DIR$/partidas/api/serializers.py</url>
           <line>23</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clubes/api/viewsets.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clubes/api/viewsets.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clubes/api/viewsets.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
